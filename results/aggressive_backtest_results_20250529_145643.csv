@@ -1,0 +1,2 @@
+timestamp,price,next_price,predicted_price,price_change_pct,signal,signal_type,confidence,portfolio_value,balance,btc_holdings,executed,total_cost
+2025-05-29 14:56:07.176594,50000,50000,50000,0,HOLD,regular,0,100000,100000,0,False,0

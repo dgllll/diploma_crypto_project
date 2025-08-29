@@ -1,0 +1,48 @@
+=== СТАТИСТИКА ТОРГОВОЇ СИСТЕМИ ===
+Дата: 2025-06-12 10:57:49
+
+total_trades: 152
+buy_trades: 68
+sell_trades: 66
+scalping_trades: 0
+total_fees_paid: 1531.805794465499
+total_slippage_cost: 127.65048287212497
+total_trading_costs: 1659.456277337624
+avg_confidence: 0.8950408324666214
+portfolio_volatility: 530.5378948498277
+open_positions: 1
+stop_loss_triggered: 46
+take_profit_triggered: 16
+trailing_stop_triggered: 0
+position_timeouts: 14
+short_trades: 9
+short_cover_trades: 9
+short_pnl: -795.633924548048
+long_pnl: 2355.012226066772
+open_long_positions: 1
+open_short_positions: 0
+stop_loss_rate: 60.526315789473685
+take_profit_rate: 21.052631578947366
+trailing_stop_rate: 0.0
+timeout_rate: 18.421052631578945
+short_success_rate: 0
+long_success_rate: 100
+cost_ratio: 2.558973311908801
+
+=== АНАЛІТИКА РЕЗУЛЬТАТІВ ===
+Загальна кількість записів: 203
+Виконаних трейдів: 77
+Початкова вартість портфеля: $100,000.00
+Кінцева вартість портфеля: $102,810.06
+Загальна прибутковість: +2.81%
+
+=== РОЗПОДІЛ СИГНАЛІВ ===
+HOLD: 126 (62.1%)
+BUY: 68 (33.5%)
+SHORT: 9 (4.4%)
+
+=== УСПІШНІСТЬ ===
+Прибуткових трейдів: 0 з 77
+Відсоток успішності: 0.0%
+Середній прибуток: $0.00
+Середній збиток: $nan
