@@ -1,36 +1,36 @@
 # Diploma Crypto Trading System
 
-Исследовательский проект по прогнозированию цены BTC и тестированию торговых стратегий на исторических данных.
+A research project for BTC price prediction and backtesting trading strategies on historical market data.
 
-## Что делает проект
+## What This Project Does
 
-- загружает OHLCV-данные по Bitcoin из Yahoo Finance, Binance или Coinbase;
-- выполняет предобработку и строит технические признаки;
-- обучает ансамбль моделей для прогноза цены;
-- оценивает качество прогноза;
-- запускает бэктест торговых стратегий, включая более агрессивные сценарии.
+- loads Bitcoin OHLCV data from Yahoo Finance, Binance, or Coinbase;
+- preprocesses the data and builds technical features;
+- trains an ensemble of models for price prediction;
+- evaluates prediction quality;
+- runs backtests for trading strategies, including more aggressive variants.
 
-По умолчанию в конфигурации используется `BTC-USD`, таймфрейм `1h`.
+By default, the configuration uses `BTC-USD` with a `1h` timeframe.
 
-## Структура
+## Structure
 
-- `main.py` — базовый end-to-end пайплайн: данные, признаки, обучение, оценка, простой бэктест.
-- `main_aggresive.py` — агрессивная торговая версия.
-- `main_aggresive_SL.py` — агрессивная версия со стоп-лосс логикой.
-- `main_stoploss.py` — наиболее расширенный сценарий: шорт-позиции, риск-менеджмент, анализ по таймфреймам.
-- `data/` — загрузка и обработка данных, а также сохраненные CSV-снимки.
-- `features/` — технические индикаторы, лаги, инженерия признаков.
-- `models/` — пайплайн прогнозирования, ансамбли, оптимизация и сохраненные модели.
-- `trading/` — торговые стратегии и базовый бэктест.
-- `evaluation/` — метрики и визуализации.
-- `results/` — отчеты и результаты запусков.
-- `another_versions/` — архивные и экспериментальные варианты сценариев.
+- `main.py` - the basic end-to-end pipeline: data loading, feature engineering, training, evaluation, and simple backtesting.
+- `main_aggresive.py` - the aggressive trading version.
+- `main_aggresive_SL.py` - the aggressive version with stop-loss logic.
+- `main_stoploss.py` - the most advanced scenario: short positions, risk management, and multi-timeframe analysis.
+- `data/` - data loading, preprocessing, and saved CSV snapshots.
+- `features/` - technical indicators, lags, and feature engineering.
+- `models/` - prediction pipelines, ensembles, optimization, and saved models.
+- `trading/` - trading strategies and basic backtesting.
+- `evaluation/` - metrics and visualizations.
+- `results/` - generated reports and run outputs.
+- `another_versions/` - archived and experimental script variants.
 
-## Модели и логика
+## Models and Logic
 
-Проект использует градиентный бустинг и ансамбли моделей, в том числе `XGBoost`, `LightGBM` и `HistGradientBoostingRegressor`. Признаки строятся на основе OHLCV, технических индикаторов и лаговых значений.
+The project uses gradient boosting and ensemble models, including `XGBoost`, `LightGBM`, and `HistGradientBoostingRegressor`. Features are built from OHLCV data, technical indicators, and lagged values.
 
-## Быстрый запуск
+## Quick Start
 
 ```bash
 python3 -m venv .venv
@@ -39,7 +39,7 @@ pip install -r requirements.txt
 python main.py
 ```
 
-Для других сценариев можно запускать:
+To run other scenarios:
 
 ```bash
 python main_aggresive.py
@@ -47,12 +47,12 @@ python main_aggresive_SL.py
 python main_stoploss.py
 ```
 
-## Выходные файлы
+## Output Files
 
-- сырые данные сохраняются в `data/`;
-- обученные модели — в `models/saved/`;
-- графики и отчеты — в `results/`.
+- raw data is saved in `data/`;
+- trained models are saved in `models/saved/`;
+- charts and reports are saved in `results/`.
 
-## Примечание
+## Note
 
-В репозитории уже лежит много сгенерированных артефактов (`data/*.csv`, `models/saved/*.pkl`), поэтому проект занимает заметный объем и первый `clone`/`push` может быть долгим.
+The repository already contains many generated artifacts such as `data/*.csv` and `models/saved/*.pkl`, so the project is fairly large and the first `clone` or `push` may take a while.
